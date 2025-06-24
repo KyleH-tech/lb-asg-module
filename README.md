@@ -52,8 +52,8 @@ local_ip          = "YOUR_PUBLIC_IP"
 
 ###3. Add user-data to the asg launch template. Code I used that had no errors for me:
 #!/bin/bash
-# Use this for your user data (script from top to bottom)
-# install httpd (Linux 2 version)
+#Use this for you ec2 user data (from top to bottom)
+#install httpd (Linux 2 version)
 yum update -y
 yum install -y httpd
 systemctl start httpd

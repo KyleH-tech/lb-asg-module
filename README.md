@@ -13,15 +13,15 @@ This repository demonstrates a fully modular infrastructure-as-code project usin
 
 ## 📁 Project Structure
 
-terraform-vpc-module/
-├── modules/
-│ ├── lb-asg/ # Load Balancer, Auto Scaling Group, Launch Template
-│ └── vpc/ # VPC, subnets, IGW, route tables
-├── main.tf # Module composition
-├── variables.tf
-├── outputs.tf
-├── terraform.tfvars # Optional for user-defined variables
-├── README.md
+terraform-vpc-module/</br>
+├── modules/</br>
+│ ├── lb-asg/ # Load Balancer, Auto Scaling Group, Launch Template</br>
+│ └── vpc/ # VPC, subnets, IGW, route tables</br>
+├── main.tf # Module composition</br>
+├── variables.tf</br>
+├── outputs.tf</br>
+├── terraform.tfvars # Optional for user-defined variables</br>
+├── README.md</br>
 
 
 ---
@@ -46,19 +46,19 @@ git clone https://github.com/KyleH-tech/lb-asg-module.git
 ###2. Configure your variables
 You can edit terraform.tfvars or define values at runtime:
 
-aws_region        = "us-east-1"
-local_ip          = "YOUR_PUBLIC_IP"
+aws_region        = "us-east-1"</br>
+local_ip          = "YOUR_PUBLIC_IP"</br>
 ⚠️ Replace YOUR_PUBLIC_IP with your actual IP to allow SSH or HTTP access if needed
 
-###3. Add user-data to the asg launch template. Code I used that had no errors for me:
-#!/bin/bash
-#Use this for you ec2 user data (from top to bottom)
-#install httpd (Linux 2 version)
-yum update -y
-yum install -y httpd
-systemctl start httpd
-systemctl enable httpd
-echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
+###3. Add user-data to the asg launch template. Code I used that had no errors for me:</br>
+#!/bin/bash </br>
+#Use this for you ec2 user data (from top to bottom)</br>
+#install httpd (Linux 2 version)</br>
+yum update -y</br>
+yum install -y httpd</br>
+systemctl start httpd</br>
+systemctl enable httpd</br>
+echo "Hello World from $(hostname -f)" > /var/www/html/index.html</br>
 
 
 📦 Module Inputs

@@ -86,3 +86,5 @@ set_region – AWS region used
 
 ✍️ Author Notes
 This repository was created as part of a personal DevOps learning journey and professional demonstration. It showcases real-world infrastructure concepts including load balancing, high availability, scaling, and Terraform modularization.
+
+<h1>Side note: please review example folder for help</h1>
